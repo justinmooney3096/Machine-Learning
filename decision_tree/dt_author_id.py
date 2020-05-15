@@ -7,10 +7,15 @@
     Sara has label 0
     Chris has label 1
 """
-    
 import sys
+import os
+emailpath = os.path.join(os.path.dirname(os.path.dirname( __file__ )), 'tools')
+classvis = os.path.join(os.path.dirname(os.path.dirname( __file__ )), 'choose_your_own')
+sys.path.append(emailpath)
+sys.path.append(classvis)
+
 from time import time
-sys.path.append("../tools/")
+from class_vis import prettyPicture, output_image
 from email_preprocess import preprocess
 
 
